@@ -252,7 +252,7 @@ body p {
   background: transparent url("../../images/noise1.png");
 }
 .banner-title .content {
-  padding: 140px 0px 60px;
+  padding: 40px 0px 0px;
   color: #ffffff;
 }
 .banner-title .content .main-title {
@@ -826,7 +826,6 @@ body p {
 /* schedule */
 .schedule {
   width: 100%;
-  background: url("https://lh3.googleusercontent.com/3b6Gx5xHiEiPVCYoaAnCsD47x68vHV3hxfzmYZa6M2hyicmenBs8GRHkRbKdT2mU_gaKd6x36j0ZzuGmnqxD39TVMb7HI5x7y6If2C1Dd5AuEYnmQzomAhiYb4LHfS-7YTIJE1BhZNfE6PdLjzxzqeHx3vZDjN0jjtA5VEb3IK2FUC1TwPIjaxjzCkAnwXH8uUKliP3wVsFcGGBIWsqkt58kYYk5y8Y77FtFzrobh-kfWjFCs8uYvT8Pt1H-nqp0NhJ9a0M6tSiETqwAE968DPyqiwQyj0tsN2ZNBm0Q6RIjrD3VkgHb_bVzBTabJPRkBfAmWKrRGUXLv7TRbKz5aB53jMuK8fwWj1VHZVru3WUqy895zKW7hPUfFKoaQ4oYuUxPXUwjGCfPcqVX5ZVT6QJrBI1lKTHFFaMXMDO78VkCPDKHn7D-5JrcVQaEusaeanhZmhgwzsdnMYIVGvV_BqX3RKtDXmshADbRPWd70iR-g9zLZp19_deC3SGIO6VH6zq9u_wx_qCE1a-xLdFXHSu2dyNQRMzotIQIkc5TMBT3OCwkaoPeXFWuJ-et9CVJO3gaPEnmf6UrFh2xY6Wsf9kv0y14jN60Gz7IroNQXUQ0vgqHprvDVxQNPeKW_OB7WiTUsqSSWP0wqdz-5ZP_e0v_jZ6Q9wKArcnGAv9KgbF6_UGs0Uda1wIocp8lMzw78h_dOHU57fE4pn6kjCCrdg=w3584-h1766-no?authuser=0");
   background-size: cover;
   position: relative;
   z-index: 1;

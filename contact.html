@@ -1,388 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Jukebox - Responsive Music and Band Website Template"
-    />
-    <link rel="icon" href="https://i.postimg.cc/RqxNSCmV/favicon.png" />
 
-    <title>SonarMen - Contact</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Jukebox - Responsive Music and Band Website Template" />
+  <link rel="icon" href="https://i.postimg.cc/RqxNSCmV/favicon.png" />
 
-    <!-- Bootstrap -->
-    <link href="assets/stylesheets/css/bootstrap.min.css" rel="stylesheet" />
+  <title>SonarMen - Contact</title>
 
-    <!-- Font Stylesheets -->
+  <!-- Bootstrap -->
+  <link href="assets/stylesheets/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link
-      href="http://fonts.googleapis.com/css?family=Oswald:400,700,300"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="http://fonts.googleapis.com/css?family=Lato:300,400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- Font Stylesheets -->
 
-    <!-- JQuery -->
-    <script src="assets/javascripts/jquery.min.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Oswald:400,700,300" rel="stylesheet" type="text/css" />
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
 
-    <!-- jpreloader -->
-    <link
-      href="assets/javascripts/jpreloader/jpreloader.css"
-      rel="stylesheet"
-    />
-    <script src="assets/javascripts/jpreloader/jpreloader.min.js"></script>
-    <script src="assets/javascripts/contact.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/integration
-        emailjs.init("user_Af3P9zdAjoSWRxoj8NDF5");
-      })();
-    </script>
+  <!-- JQuery -->
+  <script src="assets/javascripts/jquery.min.js"></script>
 
-    <!-- font-awesome.css -->
-    <link
-      href="assets/stylesheets/css/fontawesome/font-awesome.css"
-      rel="stylesheet"
-    />
+  <!-- jpreloader -->
+  <link href="assets/javascripts/jpreloader/jpreloader.css" rel="stylesheet" />
+  <script src="assets/javascripts/jpreloader/jpreloader.min.js"></script>
+  <script src="assets/javascripts/contact.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // https://dashboard.emailjs.com/admin/integration
+      emailjs.init("user_Af3P9zdAjoSWRxoj8NDF5");
+    })();
+  </script>
 
-    <!-- animate.css -->
-    <link href="assets/stylesheets/css/animate.css" rel="stylesheet" />
+  <!-- font-awesome.css -->
+  <link href="assets/stylesheets/css/fontawesome/font-awesome.css" rel="stylesheet" />
 
-    <!-- Jplayer -->
-    <link
-      href="assets/javascripts/jplayer/skin/jukebox/css/jplayer.jukebox.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- animate.css -->
+  <link href="assets/stylesheets/css/animate.css" rel="stylesheet" />
 
-    <!-- Fancybox -->
-    <link
-      href="assets/javascripts/fancybox/jquery.fancybox.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- Jplayer -->
+  <link href="assets/javascripts/jplayer/skin/jukebox/css/jplayer.jukebox.css" rel="stylesheet" type="text/css" />
 
-    <!-- Owl Carousel -->
-    <link
-      href="assets/javascripts/owl.carousel/owl.carousel.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="assets/javascripts/owl.carousel/owl.theme.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!-- Fancybox -->
+  <link href="assets/javascripts/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
 
-    <!-- User Defined Style -->
-    <link href="assets/stylesheets/css/style.css" rel="stylesheet" />
-    <link href="assets/stylesheets/css/responsive.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Splash Screen Begin -->
-    <div id="jSplash" class="preloader">
-      <div id="loader">
-        <div class="shape-wrap">
-          <div class="shape">
-            <h2>Loading</h2>
-          </div>
+  <!-- Owl Carousel -->
+  <link href="assets/javascripts/owl.carousel/owl.carousel.css" rel="stylesheet" type="text/css" />
+  <link href="assets/javascripts/owl.carousel/owl.theme.css" rel="stylesheet" type="text/css" />
+
+  <!-- User Defined Style -->
+  <link href="assets/stylesheets/css/style.css" rel="stylesheet" />
+  <link href="assets/stylesheets/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Splash Screen Begin -->
+  <div id="jSplash" class="preloader">
+    <div id="loader">
+      <div class="shape-wrap">
+        <div class="shape">
+          <h2>Loading</h2>
         </div>
-        <div id="fadingBarsG">
-          <div id="fadingBarsG_1" class="fadingBarsG"></div>
-          <div id="fadingBarsG_2" class="fadingBarsG"></div>
-          <div id="fadingBarsG_3" class="fadingBarsG"></div>
-          <div id="fadingBarsG_4" class="fadingBarsG"></div>
-          <div id="fadingBarsG_5" class="fadingBarsG"></div>
-          <div id="fadingBarsG_6" class="fadingBarsG"></div>
-          <div id="fadingBarsG_7" class="fadingBarsG"></div>
-          <div id="fadingBarsG_8" class="fadingBarsG"></div>
-        </div>
+      </div>
+      <div id="fadingBarsG">
+        <div id="fadingBarsG_1" class="fadingBarsG"></div>
+        <div id="fadingBarsG_2" class="fadingBarsG"></div>
+        <div id="fadingBarsG_3" class="fadingBarsG"></div>
+        <div id="fadingBarsG_4" class="fadingBarsG"></div>
+        <div id="fadingBarsG_5" class="fadingBarsG"></div>
+        <div id="fadingBarsG_6" class="fadingBarsG"></div>
+        <div id="fadingBarsG_7" class="fadingBarsG"></div>
+        <div id="fadingBarsG_8" class="fadingBarsG"></div>
       </div>
     </div>
-    <!-- Splash Screen End -->
+  </div>
+  <!-- Splash Screen End -->
 
-    <!-- Navbar Begin -->
-    <nav
-      class="navbar fixonscroll solidnavbar navbar-inverse"
-      role="navigation"
-      id="home-nav"
-    >
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar"
-            aria-expanded="false"
-            aria-controls="navbar"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"
-            ><img src="https://i.postimg.cc/TYML0p9v/logo-dark.png" alt="Logo"
-          /></a>
-        </div>
-        <!-- /.navbar-header -->
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="sonics.html">Sonics</a></li>
-            <li><a href="band.html">Band</a></li>
-
-            <li class="dropdown"></li>
-
-            <li>
-              <a href="index.html" class="brand"
-                ><img
-                  src="https://i.postimg.cc/TYML0p9v/logo-dark.png"
-                  alt="Jukebox Logo"
-              /></a>
-            </li>
-            <li><a href="concert.html">Concerts</a></li>
-            <li class="dropdown"></li>
-            <li><a href="#">Contacts</a></li>
-            <li class="dropdown"></li>
-            <!-- /.dropdown -->
-          </ul>
-          <!-- /.nav -->
-        </div>
-        <!--/.nav-collapse -->
+  <!-- Navbar Begin -->
+  <nav class="navbar fixonscroll solidnavbar navbar-inverse" role="navigation" id="home-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/TYML0p9v/logo-dark.png" alt="Logo" /></a>
       </div>
-      <!--/.container -->
-    </nav>
-    <!--/.navbar -->
-    <!-- Navbar End -->
+      <!-- /.navbar-header -->
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="sonics.html">Sonics</a></li>
+          <li><a href="band.html">Band</a></li>
 
-    <!-- Map Begin -->
-    <div
-      class="map"
-      id="map-canvas"
-      style="display: flex; justify-content: center"
-    >
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46221.33399458466!2d3.8391500320049325!3d43.61001085532415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sen!2sfr!4v1640469795228!5m2!1sen!2sfr"
-        width="80%"
-        height="400"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
+          <li class="dropdown"></li>
+
+          <li>
+            <a href="index.html" class="brand"><img src="https://i.postimg.cc/TYML0p9v/logo-dark.png"
+                alt="Jukebox Logo" /></a>
+          </li>
+          <li><a href="concert.html">Concerts</a></li>
+          <li class="dropdown"></li>
+          <li><a href="#">Contacts</a></li>
+          <li class="dropdown"></li>
+          <!-- /.dropdown -->
+        </ul>
+        <!-- /.nav -->
+      </div>
+      <!--/.nav-collapse -->
     </div>
-    <!-- Map End -->
+    <!--/.container -->
+  </nav>
+  <!--/.navbar -->
+  <!-- Navbar End -->
 
-    <!-- Contact Wrap Begin -->
-    <section class="contact-wrap">
-      <div class="container">
-        <div class="col-md-7 left">
-          <div class="title" style="margin-top: 0%">
-            <h2 style="margin-top: 0%">Message</h2>
-          </div>
-          <form method="post" id="contactform">
-            <div class="row">
-              <div class="col-md-6">
-                <label for="author">Nom<span class="required">*</span></label>
-                <input id="name" class="form-control" name="name" type="text" />
-              </div>
-              <div class="col-md-6">
-                <label for="email">Email<span class="required">*</span></label>
-                <input
-                  id="email"
-                  class="form-control"
-                  name="email"
-                  type="text"
-                />
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <label for="comment">Votre message</label>
-                <textarea
-                  id="message"
-                  class="form-control"
-                  name="message"
-                ></textarea>
-                <div id="notification"></div>
-                <input
-                  name="submit"
-                  type="submit"
-                  id="submit"
-                  class="def-button"
-                  value="Envoyer"
-                  onclick="sendEmail()"
-                />
-              </div>
-            </div>
-          </form>
+  <!-- Contact Wrap Begin -->
+  <section class="contact-wrap">
+    <div class="container">
+      <div class="col-md-7 left">
+        <div class="title" style="margin-top: 0%">
+          <h2 style="margin-top: 0%">Message</h2>
         </div>
-        <!--/.left -->
-
-        <div class="col-md-5 right">
-          <div class="section">
-            <div class="title top-title">
-              <h2>Information</h2>
+        <form method="post" id="contactform">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="author">Nom<span class="required">*</span></label>
+              <input id="name" class="form-control" name="name" type="text" />
             </div>
-            <div class="text">
-              <span class="sectiontext">
-                Venez nous contacter directement.
-              </span>
-              <ul>
-                <li>
-                  <span class="bold">
-                    <span class="shape"><i class="fa fa-map-marker"></i></span>
-                    Addresse :
-                  </span>
-                  <a
-                    href="https://goo.gl/maps/8ZGWQRTnD3D2jh9R9"
-                    target="_blank"
-                  >
-                    Montpellier, 34000, France</a
-                  >
-                </li>
-                <li>
-                  <span class="bold">
-                    <span class="shape"><i class="fa fa-envelope-o"></i></span>
-                    Email :
-                  </span>
-                  <a href="mailto:contact@sonarmen.com" target="_blank">
-                    contact@sonarmen.com</a
-                  >
-                </li>
-                <li>
-                  <span class="bold">
-                    <span class="shape"><i class="fa fa-phone"></i></span> Phone
-                    :
-                  </span>
-                  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="tel:+33672041673" target="_blank"
-                    >Tony +33 6 72 04 16 73</a
-                  >
-                  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="tel:+33677703817" target="_blank"
-                    >Jim +33 6 77 70 38 17</a
-                  >
-                </li>
-              </ul>
+            <div class="col-md-6">
+              <label for="email">Email<span class="required">*</span></label>
+              <input id="email" class="form-control" name="email" type="text" />
             </div>
           </div>
-          <!--/.section -->
-          <div class="section">
-            <div class="title">
-              <h2>Connect</h2>
+          <div class="row">
+            <div class="col-md-12">
+              <label for="comment">Votre message</label>
+              <textarea id="message" class="form-control" name="message"></textarea>
+              <div id="notification"></div>
+              <input name="submit" type="submit" id="submit" class="def-button" value="Envoyer" onclick="sendEmail()" />
             </div>
-            <div class="content">
-              <div class="socmed-wrap">
-                <a href="https://www.facebook.com/The.SonarMen" target="_blank"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/channel/UC2j30NDzoFNOQAMYvpuxBUQ"
-                  target="_blank"
-                  ><i class="fa fa-youtube"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/the_sonarmen/"
-                  target="_blank"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-              </div>
-              <!-- /.socmed-wrap -->
-            </div>
-            <!-- /.content -->
           </div>
-          <!--/.section -->
-        </div>
-        <!--/.right -->
+        </form>
       </div>
-      <!-- /.container -->
-    </section>
-    <!-- Contact Wrap End-->
+      <!--/.left -->
 
-    <!-- Footer Begin-->
-    <footer class="footer">
-      <div class="container">
-        <div class="col-md-8 col-sm-8 footer-row">
+      <div class="col-md-5 right">
+        <div class="section">
+          <div class="title top-title">
+            <h2>Information</h2>
+          </div>
+          <div class="text">
+            <span class="sectiontext">
+              Venez nous contacter directement.
+            </span>
+            <ul>
+              <li>
+                <span class="bold">
+                  <span class="shape"><i class="fa fa-map-marker"></i></span>
+                  Addresse :
+                </span>
+                <a href="https://goo.gl/maps/8ZGWQRTnD3D2jh9R9" target="_blank">
+                  Montpellier, 34000, France</a>
+              </li>
+              <li>
+                <span class="bold">
+                  <span class="shape"><i class="fa fa-envelope-o"></i></span>
+                  Email :
+                </span>
+                <a href="mailto:contact@sonarmen.com" target="_blank">
+                  contact@sonarmen.com</a>
+              </li>
+              <li>
+                <span class="bold">
+                  <span class="shape"><i class="fa fa-phone"></i></span> Phone
+                  :
+                </span>
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="tel:+33672041673" target="_blank">Tony +33 6 72 04 16 73</a>
+                <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="tel:+33677703817" target="_blank">Jim +33 6 77 70 38 17</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--/.section -->
+        <div class="section">
           <div class="title">
-            <h4>The SonarMen : Classics Hits Décalés/Déjantés</h4>
+            <h2>Connect</h2>
           </div>
-          <div class="content">
-            <div class="text">
-              <p>
-                « La potion originale des SonarMen consiste à réinventer la
-                culture populaire en déjantant des classiques de tous les styles
-                avec des instruments traditionnels (banjo, mandoline,
-                contrebasse…) dans un esprit rock et festif. »
-              </p>
-            </div>
-            <!-- /.content -->
-          </div>
-          <!-- /.text -->
-        </div>
-        <div class="col-md-4 col-sm-4 footer-row">
-          <div class="title"><h4>Restons connectés</h4></div>
-          <p>Voici nos réseaux sociaux.</p>
           <div class="content">
             <div class="socmed-wrap">
-              <a href="https://www.facebook.com/The.SonarMen" target="_blank"
-                ><i class="fa fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/channel/UC2j30NDzoFNOQAMYvpuxBUQ"
-                target="_blank"
-                ><i class="fa fa-youtube"></i
-              ></a>
-              <a href="https://www.instagram.com/the_sonarmen/" target="_blank"
-                ><i class="fa fa-instagram"></i
-              ></a>
+              <a href="https://www.facebook.com/The.SonarMen" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.youtube.com/channel/UC2j30NDzoFNOQAMYvpuxBUQ" target="_blank"><i
+                  class="fa fa-youtube"></i></a>
+              <a href="https://www.instagram.com/the_sonarmen/" target="_blank"><i class="fa fa-instagram"></i></a>
             </div>
             <!-- /.socmed-wrap -->
           </div>
           <!-- /.content -->
         </div>
-        <!-- /.footer-row -->
+        <!--/.section -->
       </div>
-      <!-- /.container -->
-    </footer>
-    <!-- /.footer -->
-    <!-- Footer End-->
+      <!--/.right -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- Contact Wrap End-->
 
-    <section class="copyright">
-      <div class="container">
-        <p>&copy; Jukebox 2015. All Right Reserved</p>
+  <!-- Footer Begin-->
+  <footer class="footer">
+    <div class="container">
+      <div class="col-md-8 col-sm-8 footer-row">
+        <div class="title">
+          <h4>The SonarMen : Classics Hits Décalés/Déjantés</h4>
+        </div>
+        <div class="content">
+          <div class="text">
+            <p>
+              « La potion originale des SonarMen consiste à réinventer la
+              culture populaire en déjantant des classiques de tous les styles
+              avec des instruments traditionnels (banjo, mandoline,
+              contrebasse…) dans un esprit rock et festif. »
+            </p>
+          </div>
+          <!-- /.content -->
+        </div>
+        <!-- /.text -->
       </div>
-    </section>
+      <div class="col-md-4 col-sm-4 footer-row">
+        <div class="title">
+          <h4>Restons connectés</h4>
+        </div>
+        <p>Voici nos réseaux sociaux.</p>
+        <div class="content">
+          <div class="socmed-wrap">
+            <a href="https://www.facebook.com/The.SonarMen" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UC2j30NDzoFNOQAMYvpuxBUQ" target="_blank"><i
+                class="fa fa-youtube"></i></a>
+            <a href="https://www.instagram.com/the_sonarmen/" target="_blank"><i class="fa fa-instagram"></i></a>
+          </div>
+          <!-- /.socmed-wrap -->
+        </div>
+        <!-- /.content -->
+      </div>
+      <!-- /.footer-row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+  <!-- Footer End-->
 
-    <!-- Javascript Plugins -->
-    <script src="assets/javascripts/bootstrap.min.js"></script>
-    <script src="assets/javascripts/jplayer/jquery.jplayer.min.js"></script>
-    <script src="assets/javascripts/jplayer/add-on/jplayer.playlist.min.js"></script>
-    <script src="assets/javascripts/wow/wow.min.js"></script>
-    <script src="assets/javascripts/modernizr.js"></script>
-    <script src="assets/javascripts/jquery.hoverdir.js"></script>
-    <script src="assets/javascripts/jquery.easing.js"></script>
-    <script src="assets/javascripts/jquery.form.js"></script>
-    <script src="assets/javascripts/sly.min.js"></script>
-    <script src="assets/javascripts/jquery.parallax-1.1.3.js"></script>
-    <script src="assets/javascripts/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/javascripts/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="assets/javascripts/isotope.pkgd.min.js"></script>
-    <script src="assets/javascripts/masonry.pkgd.min.js"></script>
-    <script src="assets/javascripts/googlemap.api.js"></script>
-    <script src="assets/javascripts/custom-map.js"></script>
+  <section class="copyright">
+    <div class="container">
+      <p>&copy; Jukebox 2015. All Right Reserved</p>
+    </div>
+  </section>
 
-    <!-- Jukebox javascript customs and settings -->
-    <script src="assets/javascripts/custom.js"></script>
-  </body>
+  <!-- Javascript Plugins -->
+  <script src="assets/javascripts/bootstrap.min.js"></script>
+  <script src="assets/javascripts/jplayer/jquery.jplayer.min.js"></script>
+  <script src="assets/javascripts/jplayer/add-on/jplayer.playlist.min.js"></script>
+  <script src="assets/javascripts/wow/wow.min.js"></script>
+  <script src="assets/javascripts/modernizr.js"></script>
+  <script src="assets/javascripts/jquery.hoverdir.js"></script>
+  <script src="assets/javascripts/jquery.easing.js"></script>
+  <script src="assets/javascripts/jquery.form.js"></script>
+  <script src="assets/javascripts/sly.min.js"></script>
+  <script src="assets/javascripts/jquery.parallax-1.1.3.js"></script>
+  <script src="assets/javascripts/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/javascripts/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="assets/javascripts/isotope.pkgd.min.js"></script>
+  <script src="assets/javascripts/masonry.pkgd.min.js"></script>
+  <script src="assets/javascripts/googlemap.api.js"></script>
+  <script src="assets/javascripts/custom-map.js"></script>
+
+  <!-- Jukebox javascript customs and settings -->
+  <script src="assets/javascripts/custom.js"></script>
+</body>
+
 </html>
