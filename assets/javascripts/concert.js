@@ -5,8 +5,8 @@ fetch("https://us-central1-sonarmen-3bdf9.cloudfunctions.net/getEvents")
     console.log(events);
     // Filter the events into future and passed events
     const futureEvents = events.future.sort((a, b) => {
-        return new Date(a.start_time) - new Date(b.start_time);
-      });
+      return new Date(a.start_time) - new Date(b.start_time);
+    });
     const passedEvents = events.past.sort((a, b) => {
       return new Date(b.start_time) - new Date(a.start_time);
     });

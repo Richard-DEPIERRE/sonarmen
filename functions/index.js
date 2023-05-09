@@ -1,69 +1,73 @@
 const functions = require("firebase-functions");
 const axios = require("axios");
 const admin = require("firebase-admin");
+const cors = require("cors")({ origin: true });
+
 admin.initializeApp();
 
 // HTTP function to retrieve events from Firestore
 exports.getEvents = functions.https.onRequest(async (req, res) => {
-  try {
-    // Reference to events collection in Firestore
-    const eventsRef = admin.firestore().collection("events");
-    const allevents = await eventsRef.get();
-    const all = allevents.docs.map((doc) => {
-      const event = doc.data();
-      return {
-        location: event.location,
-        date: event.date,
-        link: event.link,
-        name: event.name,
-        start_time: event.start_time,
+  cors(req, res, async () => {
+    try {
+      // Reference to events collection in Firestore
+      const eventsRef = admin.firestore().collection("events");
+      const allevents = await eventsRef.get();
+      const all = allevents.docs.map((doc) => {
+        const event = doc.data();
+        return {
+          location: event.location,
+          date: event.date,
+          link: event.link,
+          name: event.name,
+          start_time: event.start_time,
+        };
+      });
+
+      const futureEvents = allevents.docs
+        .filter((dox) => {
+          const event = dox.data();
+          return new Date(event.start_time) >= new Date();
+        })
+        .map((doc) => {
+          const event = doc.data();
+          return {
+            location: event.location,
+            date: event.date,
+            link: event.link,
+            name: event.name,
+            start_time: event.start_time,
+          };
+        });
+      const pastEvents = allevents.docs
+        .filter((dox) => {
+          const event = dox.data();
+          return new Date(event.start_time) < new Date();
+        })
+        .map((doc) => {
+          const event = doc.data();
+          return {
+            location: event.location,
+            date: event.date,
+            link: event.link,
+            name: event.name,
+            start_time: event.start_time,
+          };
+        });
+
+      // Combine future and past events into a single response object
+      const events = {
+        all: all,
+        future: futureEvents,
+        past: pastEvents,
       };
-    });
 
-    const futureEvents = allevents.docs
-      .filter((dox) => {
-        const event = dox.data();
-        return new Date(event.start_time) >= new Date();
-      })
-      .map((doc) => {
-        const event = doc.data();
-        return {
-          location: event.location,
-          date: event.date,
-          link: event.link,
-          name: event.name,
-          start_time: event.start_time,
-        };
-      });
-    const pastEvents = allevents.docs
-      .filter((dox) => {
-        const event = dox.data();
-        return new Date(event.start_time) < new Date();
-      })
-      .map((doc) => {
-        const event = doc.data();
-        return {
-          location: event.location,
-          date: event.date,
-          link: event.link,
-          name: event.name,
-          start_time: event.start_time,
-        };
-      });
-
-    // Combine future and past events into a single response object
-    const events = {
-      all: all,
-      future: futureEvents,
-      past: pastEvents,
-    };
-
-    // Send events data as JSON response
-    res.json(events);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Error retrieving events data from Firestore");
-  }
+      // Send events data as JSON response
+      res.json(events);
+    } catch (error) {
+      console.error(error);
+      res.status(500).send("Error retrieving events data from Firestore");
+    }
+  });
 });
 
 const db = admin.firestore();
