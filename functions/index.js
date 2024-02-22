@@ -74,7 +74,7 @@ const db = admin.firestore();
 
 // Replace YOUR_ACCESS_TOKEN with your actual Facebook access token
 const ACCESS_TOKEN =
-  "acess-token";
+"acess-token";
 const PAGE_ID = "The.SonarMen";
 
 exports.getFacebookEvents = functions.pubsub
@@ -82,7 +82,7 @@ exports.getFacebookEvents = functions.pubsub
   .onRun(async (context) => {
     try {
       const response = await axios.get(
-        `https://graph.facebook.com/${PAGE_ID}/events?fields=id,name,start_time,description,place&access_token=${ACCESS_TOKEN}&limit=300`
+        `https://graph.facebook.com/${PAGE_ID}/events?fields=id,name,start_time,description,place&access_token=${ACCESS_TOKEN}&limit=600`
       );
 
       const events = response.data.data;
