@@ -77,8 +77,8 @@ const ACCESS_TOKEN =
 "acess-token";
 const PAGE_ID = "The.SonarMen";
 
-exports.getFacebookEvents = functions.pubsub
-  .schedule("every 24 hours")
+exports.getFacebookEvents = functions.pubsub.schedule('0 9 * * *') // every day at 9 am
+.timeZone('Europe/Paris') // specify your timezone
   .onRun(async (context) => {
     try {
       const response = await axios.get(
