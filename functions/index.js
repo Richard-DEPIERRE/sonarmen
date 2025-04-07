@@ -77,8 +77,9 @@ const ACCESS_TOKEN =
 "acess-token";
 const PAGE_ID = "The.SonarMen";
 
-exports.getFacebookEvents = functions.pubsub.schedule('0 9 * * *') // every day at 9 am
-.timeZone('Europe/Paris') // specify your timezone
+exports.getFacebookEvents = functions.pubsub
+  .schedule("0 9 * * *") // every day at 9 am
+  .timeZone("Europe/Paris") // specify your timezone
   .onRun(async (context) => {
     try {
       const response = await axios.get(
@@ -134,6 +135,43 @@ exports.getFacebookEventsManualy = functions.https.onRequest(
     }
   }
 );
+
+exports.getFacebookEventsManualyWithToken = functions.https.onRequest(
+  async (req, res) => {
+    try {
+      // Retrieve the access token from the URL parameters
+      const accessToken = req.query.access_token;
+
+      if (!accessToken) {
+        return res.status(400).json({ error: "Access token is required" });
+      }
+
+      const response = await axios.get(
+        `https://graph.facebook.com/${PAGE_ID}/events?fields=id,name,start_time,description,place&access_token=${accessToken}&limit=300`
+      );
+
+      const events = response.data.data;
+
+      // Transform the events data as desired
+      const transformedEvents = transformEvents(events);
+
+      // Store the events in Firestore
+      const batch = db.batch();
+      transformedEvents.forEach((event) => {
+        const eventRef = db.collection("events").doc(event.id);
+        batch.set(eventRef, event, { merge: true });
+      });
+      await batch.commit();
+
+      console.log("Events updated successfully");
+      res.json(transformedEvents);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Failed to fetch and store events" });
+    }
+  }
+);
+
 
 // Function to transform events data as desired
 function transformEvents(events) {
